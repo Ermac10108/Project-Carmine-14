@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "license": "",
+  "copyright": "Made for the Carmine project. Do not use without permission from the current project leads unless the project's dead.",
+  "size": {
+    "x": 281,
+    "y": 53
+  },
+    "states": [
+        {
+            "name": "hivers"
+        },
+        {
+            "name": "eden"
+        },
+        {
+            "name": "coalition"
+        }
+    ]
+}
