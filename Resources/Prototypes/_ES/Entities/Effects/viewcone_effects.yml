@@ -27,6 +27,7 @@
 - type: entity
   parent: ESBaseViewconeEffect
   id: ESViewconeEffectFootstep
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: footstep
@@ -35,6 +36,7 @@
 - type: entity
   parent: ESBaseViewconeEffect
   id: ESViewconeEffectAttack
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: attack
@@ -43,6 +45,7 @@
 - type: entity
   parent: ESBaseViewconeEffect
   id: ESViewconeEffectGunfire
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: gunfire
@@ -51,6 +54,7 @@
 - type: entity
   parent: ESBaseViewconeEffect
   id: ESViewconeEffectTalk
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     state: talk

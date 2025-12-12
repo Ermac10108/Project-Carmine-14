@@ -13,6 +13,7 @@ using Content.Shared.Decals;
 using Content.Shared.Input;
 using Content.Shared.Mapping;
 using Content.Shared.Maps;
+using Linguini.Syntax.Ast;
 using Robust.Client.Console;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -265,8 +266,26 @@ public sealed class MappingState : GameplayStateBase
     {
         var mappings = new Dictionary<string, MappingPrototype>();
         var entities = new MappingPrototype(null, Loc.GetString("mapping-entities")) { Children = new List<MappingPrototype>() };
+        //string[] nameFilters = ["base", "Base", "action", "Action"];
         foreach (var entity in _prototypeManager.EnumeratePrototypes<EntityPrototype>())
         {
+            //THIS DOESN'T WORK FOR SOME STUPID REASON!!! SOMETHING PRE-MAPINIT MUST BE FUCKING THIS UP!
+            // if (entity.Abstract) //carmine edit: no abstract junk in mapping menu
+            // {
+            //     continue;
+            // }
+
+            if (entity.HideSpawnMenu) //carmine edit: no hidespawnmenu junk in mapping menu
+            {
+                continue;
+            }
+
+            //THIS ALSO DIDN'T WORK!!! WHAT!!!!!!
+            // if (nameFilters.Any(s => entity.Name.Contains(s)))
+            // {
+            //     continue;
+            // }
+
             Register(entity, entity.ID, entities);
         }
 
